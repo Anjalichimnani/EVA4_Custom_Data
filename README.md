@@ -48,7 +48,7 @@ Mean/STD values for your fg_bg, masks and depth images
   * Type: JPEG
   * Total Size: 8.66 GB
 
-
+  ![FG_BG_Images](https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/fg_bg_images.png)
 
 * Depth Masks:
   * Number of Images: 400,000
