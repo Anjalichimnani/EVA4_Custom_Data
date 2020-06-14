@@ -12,32 +12,43 @@ Mean/STD values for your fg_bg, masks and depth images
   * Number of Images: 100
   * Dimensions: 224 X 224
   * Type: JPEG
-  * Total Size:
+  * Total Size: 2.64 MB
+
+  [BG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/bg_images.png)
 
 * Foreground Images:
   * [Link for Access] (https://github.com/Anjalichimnani/EVA4_Custom_Data/tree/master/fg_images)
   * Number of Images: 100
   * Dimensions: 112 X 112
   * Type: PNG
-  * Total Size:
+  * Total Size: 1.85 MB
+
+  [FG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/fg_images.png)
 
 * Flipped Foreground Images:
   * Number of Images: 100
   * Dimensions: 112 X 112
   * Type: PNG
-  * Total Size:
+  * Total Size: 1.85 MB
+
+  [Flipped_FG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/fg_images_flip.png)
 
 * Masks:
   * [Link for Access] (https://github.com/Anjalichimnani/EVA4_Custom_Data/tree/master/mask_images)
   * Number of Images: 400,000
   * Dimensions: 224 X 224
   * Type: JPEG
-  * Total Size:
+  * Total Size: 467 KB
+
+  [Mask_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/mask_images.png)
 
 * Foreground Background Images:
   * Number of Images: 400,000
   * Dimensions: 224 X 224
   * Type: JPEG
+  * Total Size: 8.66 GB
+
+
 
 * Depth Masks:
   * Number of Images: 400,000
@@ -97,25 +108,19 @@ The Masks of the foreground images are created using the GIMP Tool by adding the
 
 ### Statistics:
 * Foreground Background images:
-  * Mean:
-  * Standard Deviation:
+  * Mean: [0.562814  0.5644937 0.5667319]
+  * Standard Deviation: [0.23423661 0.22496194 0.24435855]
 
-The code used to obtain the Mean and Standard Deviation:
+The code used to obtain the Mean and Standard Deviation for the complete records in dataset loader:
 ```
-mean = 0
-std = 0
-nb_samples = 0
-batch_samples = 0
+images = iter(dataset_loader).next()
+numpy_images = images.numpy()
 
-for data in dataset_loader:
-    batch_samples = data.size(0)
-    data = data.view(batch_samples, data.size(1), -1)
-    mean += data.mean(2).sum(0)
-    std += data.std(2).sum(0)
-    nb_samples += batch_samples
+pop_channel_std = np.std(numpy_images, axis=(0, 2, 3))
+pop_channel_mean = np.mean(numpy_images, axis=(0, 2, 3))
 
-mean /= nb_samples
-std /= nb_samples
+print (pop_channel_mean)
+print (pop_channel_std)
 
 ```
 
