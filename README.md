@@ -1,6 +1,6 @@
 ## Custom Data Creation with Depth Mask Estimation
 
-* Office Data set * represents Techpark and office images with people walking on phone, strolling, in cafeteria and meeting conferences. The images constitute background images, transparent foreground images, foreground images flipped and foreground images overlaid on background in 20 different variations. There are masks created for all the foreground images and thus, all foreground background images.
+**Office Data set** represents Techpark and office images with people walking on phone, strolling, in cafeteria and meeting conferences. The images constitute background images, transparent foreground images, foreground images flipped and foreground images overlaid on background in 20 different variations. There are masks created for all the foreground images and thus, all foreground background images.
 
 Kinds of images (fg, bg, fg_bg, masks, depth)
 Total images of each kind
