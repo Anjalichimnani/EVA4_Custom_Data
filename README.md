@@ -14,7 +14,7 @@ Mean/STD values for your fg_bg, masks and depth images
   * Type: JPEG
   * Total Size: 2.64 MB
 
-  [BG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/bg_images.png)
+  ![BG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/bg_images.png)
 
 * Foreground Images:
   * [Link for Access] (https://github.com/Anjalichimnani/EVA4_Custom_Data/tree/master/fg_images)
@@ -23,7 +23,7 @@ Mean/STD values for your fg_bg, masks and depth images
   * Type: PNG
   * Total Size: 1.85 MB
 
-  [FG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/fg_images.png)
+  ![FG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/fg_images.png)
 
 * Flipped Foreground Images:
   * Number of Images: 100
@@ -31,7 +31,7 @@ Mean/STD values for your fg_bg, masks and depth images
   * Type: PNG
   * Total Size: 1.85 MB
 
-  [Flipped_FG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/fg_images_flip.png)
+  ![Flipped_FG_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/fg_images_flip.png)
 
 * Masks:
   * [Link for Access] (https://github.com/Anjalichimnani/EVA4_Custom_Data/tree/master/mask_images)
@@ -40,7 +40,7 @@ Mean/STD values for your fg_bg, masks and depth images
   * Type: JPEG
   * Total Size: 467 KB
 
-  [Mask_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/mask_images.png)
+  ![Mask_Images] (https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/mask_images.png)
 
 * Foreground Background Images:
   * Number of Images: 400,000
