@@ -142,8 +142,8 @@ outputs = predict(model, inputs)
 ```
 
 ## References:
-[Depth Mask Estimation] (https://github.com/ialhashim/DenseDepth/blob/master/DenseDepth.ipynb)
+[Depth Mask Estimation](https://github.com/ialhashim/DenseDepth/blob/master/DenseDepth.ipynb)
 
-[Custom Pytorch Dataloaders] (https://pytorch.org/tutorials/recipes/recipes/custom_dataset_transforms_loader.html?highlight=custom%20dataset)
+[Custom Pytorch Dataloaders](https://pytorch.org/tutorials/recipes/recipes/custom_dataset_transforms_loader.html?highlight=custom%20dataset)
 
-[Mean and Standard Deviation] (https://discuss.pytorch.org/t/about-normalization-using-pre-trained-vgg16-networks/23560/6)
+[Mean and Standard Deviation](https://discuss.pytorch.org/t/about-normalization-using-pre-trained-vgg16-networks/23560/6)
