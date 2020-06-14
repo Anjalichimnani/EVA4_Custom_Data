@@ -1,4 +1,4 @@
-## Custom Data Creation with Depth Mask Estimation
+# Custom Data Creation with Depth Mask Estimation
 
 **Office Data set** represents Techpark and office images with people walking on phone, strolling, in cafeteria and meeting conferences. The images constitute background images, transparent foreground images, foreground images flipped and foreground images overlaid on background in 20 different variations. There are masks created for all the foreground images and thus, all foreground background images.
 
@@ -8,12 +8,14 @@ The total size of the dataset
 Mean/STD values for your fg_bg, masks and depth images
 
 * Background Images:
+  * [Link for Access] (https://github.com/Anjalichimnani/EVA4_Custom_Data/tree/master/bg_images)
   * Number of Images: 100
   * Dimensions: 224 X 224
   * Type: JPEG
   * Total Size:
 
 * Foreground Images:
+  * [Link for Access] (https://github.com/Anjalichimnani/EVA4_Custom_Data/tree/master/fg_images)
   * Number of Images: 100
   * Dimensions: 112 X 112
   * Type: PNG
@@ -23,6 +25,13 @@ Mean/STD values for your fg_bg, masks and depth images
   * Number of Images: 100
   * Dimensions: 112 X 112
   * Type: PNG
+  * Total Size:
+
+* Masks:
+  * [Link for Access] (https://github.com/Anjalichimnani/EVA4_Custom_Data/tree/master/mask_images)
+  * Number of Images: 400,000
+  * Dimensions: 224 X 224
+  * Type: JPEG
   * Total Size:
 
 * Foreground Background Images:
@@ -86,6 +95,31 @@ def overlay_images (bgpath, fgpath, newpath, name_prefix, bg_img_size, fg_img_si
 
 The Masks of the foreground images are created using the GIMP Tool by adding the alpha channel, selecting the image, masking the image and cropping it to desired size. The mask is then placed on back background as the foreground image on other backgrounds using the same code with addon image as background.
 
+### Statistics:
+* Foreground Background images:
+  * Mean:
+  * Standard Deviation:
+
+The code used to obtain the Mean and Standard Deviation:
+```
+mean = 0
+std = 0
+nb_samples = 0
+batch_samples = 0
+
+for data in dataset_loader:
+    batch_samples = data.size(0)
+    data = data.view(batch_samples, data.size(1), -1)
+    mean += data.mean(2).sum(0)
+    std += data.std(2).sum(0)
+    nb_samples += batch_samples
+
+mean /= nb_samples
+std /= nb_samples
+
+```
+
+### Depth Mask Estimation
 The Depth Mask is created using the Reference: [Depth Mask](https://github.com/ialhashim/DenseDepth/blob/master/DenseDepth.ipynb)
 The model is loaded as below:
 ```
@@ -101,3 +135,8 @@ The outputs are consequently depicted as below:
 ```
 outputs = predict(model, inputs)
 ```
+
+## References:
+[Depth Mask Estimation] (https://github.com/ialhashim/DenseDepth/blob/master/DenseDepth.ipynb)
+[Custom Pytorch Dataloaders] (https://pytorch.org/tutorials/recipes/recipes/custom_dataset_transforms_loader.html?highlight=custom%20dataset)
+[Mean and Standard Deviation] (https://discuss.pytorch.org/t/about-normalization-using-pre-trained-vgg16-networks/23560/6)
