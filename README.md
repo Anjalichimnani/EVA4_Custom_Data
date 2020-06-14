@@ -57,10 +57,10 @@ Mean/STD values for your fg_bg, masks and depth images
 
   ![Depth_Images](https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/Depth_Masks.PNG)
 
-## Code:
-The Complete Code can be found at: [Code](https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/Assignment15A.ipynb)
-The code to create dataset, flip images, overlay foreground on background, mean and standard deviation can be found at: [Dataset Code](https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/code/Supplements.py)
-The complete data and depth maps can be found at: [Images](https://drive.google.com/drive/folders/1YVLxYC4rj73u5vQe9VTkdnMQ6_susmZP?usp=sharing)
+## Code Access:
+* The Complete Code can be found at: [Code](https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/Assignment15A.ipynb)
+* The code to create dataset, flip images, overlay foreground on background, mean and standard deviation can be found at: [Dataset Code](https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/code/Supplements.py)
+* The complete data and depth maps can be found at: [Images](https://drive.google.com/drive/folders/1YVLxYC4rj73u5vQe9VTkdnMQ6_susmZP?usp=sharing)
 
 The foreground images are transparent and are created using GIMP Tool.
 The images are made transparent by adding alpha channel and removing the background by selecting the image foreground (poeple)
