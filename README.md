@@ -54,6 +54,8 @@ Mean/STD values for your fg_bg, masks and depth images
   * Number of Images: 400,000
   * Dimensions: 224 X 224
   * Type: JPEG
+  
+  ![Depth_Images](https://github.com/Anjalichimnani/EVA4_Custom_Data/blob/master/reference_images/Depth_Masks.PNG)
 
 
 The foreground images are transparent and are created using GIMP Tool.
